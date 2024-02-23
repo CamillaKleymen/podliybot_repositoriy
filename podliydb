@@ -1,0 +1,12 @@
+import sqlite3
+
+connection = sqlite3.connect('podliybot.db', check_same_thread=False)
+sql = connection.cursor()
+
+sql.execute('CREATE TABLE IF NOT EXISTS podlie users ('
+            'id INTEGER,'
+            'name TEXT, '
+            'number TEXT, '
+            'location TEXT'
+            ');')
+sqL.execute(CREATE TABLE IF NOT EXISTS )
