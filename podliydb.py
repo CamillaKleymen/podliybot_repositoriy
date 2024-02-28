@@ -55,7 +55,7 @@ def del_fd(fd_id):
     connection.commit()
 
 def change_fd_count(fd_id, new_count):
-    current_count = sql.execute('SELECT fd_count FROM menu WHERE fd_id=?;', (fd_id,).fetchone()
+    current_count = sql.execute('SELECT fd_count FROM menu WHERE fd_id=?;', (fd_id,).fetchone())
     sql.execute('UPDATE menu SET fd_count=? WHERE fd_id=?;',
                 (current_count[0]+new_count, fd_id))
     connection.commit()
